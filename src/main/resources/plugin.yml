@@ -1,0 +1,18 @@
+name: VaultJwt
+version: ${project.version}
+main: lordpipe.vaultjwt.VaultJwt
+description: Generate authenticating JWT keys including Vault role information
+author: lordpipe
+website: https://github.com/lordofpipes/vaultjwt
+version: 1.0
+api-version: 1.13
+depend: [Vault]
+commands:
+    token:
+        description: Generate authenticating JWT token for player
+        usage: /token
+        permission: vaultjwt.token
+    bulktoken:
+        description: Generate non-authenticating JWT token for all players
+        usage: /bulktoken
+        permission: vaultjwt.bulktoken

@@ -1,0 +1,13 @@
+privKey: |
+    -----BEGIN PRIVATE KEY-----
+    MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgpj+48dJccJkYojx2
+    5EK6uImWU96hvB8WMqE09caslD6hRANCAAS8xgd4V3ofwLQtS3Wi05aOCfVgZzjL
+    Y0VXPvhKwOjVP8/wE3kPPfDvRlOto8Q55ouqY1yp4UxpXkcFiJeOgSNl
+    -----END PRIVATE KEY-----
+
+authTokenUrl: http://example.com/auth/???/blah
+bulkTokenUrl: http://example.com/bulk/???/blah
+
+expireAfter: 3600
+
+message: "Use the above link to log in. Expires after 1 hour. Do not share this link."
