@@ -30,9 +30,13 @@ public class VaultJwt extends JavaPlugin {
 
     public TokenGenerator tokenGenerator = new TokenGenerator(this);
 
+    public static VaultJwt instance;
+
     @Override
     public void onEnable() {
         getLogger().info("VaultJwt loaded");
+
+        instance = this;
 
         this.saveDefaultConfig();
 
