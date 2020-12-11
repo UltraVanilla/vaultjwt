@@ -63,7 +63,7 @@ public class BulkTokenCommand implements CommandExecutor {
                 claims.put("players", playerTokenList);
 
 
-                sender.sendMessage(plugin.tokenGenerator.genTokenWithClaims(claims, true));
+                sender.sendMessage(plugin.tokenGenerator.genTokenWithClaims(claims, "bulk"));
             }
         };
         thread.start();

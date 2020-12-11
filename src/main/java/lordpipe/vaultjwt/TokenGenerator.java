@@ -12,7 +12,7 @@ public class TokenGenerator {
     public TokenGenerator(VaultJwt instance) {
         plugin = instance;
     }
-    public String genTokenWithClaims(Claims claims, boolean isBulk) {
+    public String genTokenWithClaims(Claims claims, String type) {
         Date now = new Date();
         claims.setExpiration(new Date(now.getTime() + plugin.config.getInt("expireAfter") * 1000));
 
@@ -20,7 +20,8 @@ public class TokenGenerator {
             .setClaims(claims)
             .signWith(plugin.privKey);
 
-        if (isBulk) return plugin.config.getString("bulkTokenUrl").replace("???", builder.compact());
-        else return plugin.config.getString("authTokenUrl").replace("???", builder.compact());
+        if (type == "bulk") return plugin.config.getString("bulkTokenUrl").replace("???", builder.compact());
+        else if (type == "login") return plugin.config.getString("authTokenUrl").replace("???", builder.compact());
+        else return builder.compact();
     }
 }

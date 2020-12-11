@@ -54,7 +54,7 @@ public class TokenCommand implements CommandExecutor {
                 claims.put("uuid", player.getUniqueId().toString());
                 claims.put("groups", perms);
 
-                sender.sendMessage(plugin.tokenGenerator.genTokenWithClaims(claims, false));
+                sender.sendMessage(plugin.tokenGenerator.genTokenWithClaims(claims, "login"));
                 sender.sendMessage(plugin.config.getString("message"));
             }
         };
